@@ -2,7 +2,7 @@
 # @Author: yinwai
 # @Date:   2023-02-28 10:25:57
 # @Last Modified by:   yinwai
-# @Last Modified time: 2023-02-28 11:23:53
+# @Last Modified time: 2023-02-28 16:19:54
 
 from CCRender.Topo import Topo
 from CCRender.Algo import Algorithm
@@ -13,12 +13,14 @@ class Diagram():
         self.topo: Topo = topo
         self.algo: Algorithm = algo
         self.flows: list(Flow(int, int, int)) = algo.commRecord(topo)
-        self.maxStep = max([flow.step for flow in self.flows])
+        self.maxStep: int = max([flow.step for flow in self.flows])
+        self.colorNum: int = 8
+        self.name: str = ''
 
     def genDot(self, nodeStr: str, edgeStr: str) -> str:
         template = f'''
 digraph G {{
-edge [colorscheme=set19]
+edge [colorscheme=dark28]
 labeljust=l
 {nodeStr}
 {edgeStr}
@@ -32,10 +34,9 @@ labeljust=l
 
     def visual(self, withStep: bool = False) -> None:
         template = self.genDot(self.genNode(), self.genEdge())
-        self.genPng(template, f'{self.algo.name}_{self.topo.nranks}')
+        filename = f'{self.algo.name}_{self.topo.name}_{self.name}'
+        self.genPng(template, filename)
         if withStep:
             for step in range(self.maxStep + 1):
                 template = self.genDot(self.genNode(), self.genEdge(step))
-                self.genPng(
-                    template,
-                    f'{self.algo.name}_{self.topo.nranks}_{step}')
+                self.genPng(template, f'{filename}_{step}')

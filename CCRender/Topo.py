@@ -2,13 +2,14 @@
 # @Author: yinwai
 # @Date:   2023-02-28 10:24:52
 # @Last Modified by:   yinwai
-# @Last Modified time: 2023-02-28 10:30:07
+# @Last Modified time: 2023-02-28 16:17:27
 
 import math
 
 class Topo():
     def __init__(self, nranks: int):
         self.nranks: int = nranks
+        self.name: str = f'{self.nranks}'
 
 
 class UniformLayeredTopo(Topo):
@@ -16,6 +17,7 @@ class UniformLayeredTopo(Topo):
         self.ninterRanks: int = ninterRanks
         self.nintraRanks: int = nintraRanks
         self.nranks: int = ninterRanks * nintraRanks
+        self.name: str = f'{self.ninterRanks}x{self.nintraRanks}'
 
     def getIntraRank(self, rank: int) -> int:
         return rank % self.nintraRanks
@@ -38,3 +40,12 @@ class Flow():
 
     def __next__(self):
         return next((self.step, self.send, self.recv))
+
+    def __hash__(self):
+        return hash(self.step) ^ hash(self.send) ^ hash(self.recv)
+
+    def __eq__(self, other):
+        return self.step == other.step and self.send == other.send and self.recv == other.recv
+
+    def __repr__(self):
+        return f'Flow({self.step}, {self.send}, {self.recv})'

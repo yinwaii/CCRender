@@ -2,7 +2,7 @@
 # @Author: yinwai
 # @Date:   2023-02-28 11:19:29
 # @Last Modified by:   yinwai
-# @Last Modified time: 2023-02-28 11:31:14
+# @Last Modified time: 2023-02-28 16:20:20
 
 from .Diagram import Diagram
 from CCRender.Topo import Topo
@@ -12,6 +12,7 @@ import math
 class SimpleDiagram(Diagram):
     def __init__(self, topo: Topo, algo: Algorithm):
         super().__init__(topo, algo)
+        self.name: str = 'Simple'
 
     def genNodeInfo(self, rank: int) -> str:
         radius: int = self.topo.nranks // 4
@@ -29,7 +30,7 @@ class SimpleDiagram(Diagram):
         return '\n'.join(resList)
 
     def genEdge(self, step: int = None) -> str:
-        calcStr = lambda flow: f'{flow.send} -> {flow.recv} [color={(flow.step) % 9 + 1}];'
+        calcStr = lambda flow: f'{flow.send} -> {flow.recv} [color={(flow.step) % self.colorNum + 1}];'
         if step is not None:
             resList: list(str) = [
                 calcStr(flow) for flow in self.flows if flow.step == step

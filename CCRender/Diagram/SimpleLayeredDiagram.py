@@ -2,7 +2,7 @@
 # @Author: yinwai
 # @Date:   2023-02-28 11:20:02
 # @Last Modified by:   yinwai
-# @Last Modified time: 2023-02-28 11:31:21
+# @Last Modified time: 2023-02-28 16:20:34
 
 from .SimpleDiagram import SimpleDiagram
 from CCRender.Topo import UniformLayeredTopo
@@ -13,6 +13,7 @@ class SimpleLayeredDiagram(SimpleDiagram):
     def __init__(self, topo: UniformLayeredTopo, algo: Algorithm):
         super().__init__(topo, algo)
         self.topo: UniformLayeredTopo = topo
+        self.name: str = 'Simple'
 
     def genNode(self) -> str:
         calcIntraLabel = lambda interRank: '\n'.join(

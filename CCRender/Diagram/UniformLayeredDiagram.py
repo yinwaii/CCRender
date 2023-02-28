@@ -2,17 +2,19 @@
 # @Author: yinwai
 # @Date:   2023-02-28 11:20:28
 # @Last Modified by:   yinwai
-# @Last Modified time: 2023-02-28 11:31:22
+# @Last Modified time: 2023-02-28 16:20:45
 
 from .Diagram import Diagram
 from CCRender.Topo import UniformLayeredTopo
 from CCRender.Algo import Algorithm
+import math
 
 
 class UniformLayeredDiagram(Diagram):
     def __init__(self, topo: UniformLayeredTopo, algo: Algorithm):
         super().__init__(topo, algo)
         self.topo: UniformLayeredTopo = topo
+        self.name: str = 'Uniform'
 
     def genNode(self) -> str:
         radius: int = self.topo.ninterRanks // 2 * self.topo.nintraRanks // 4
@@ -32,7 +34,7 @@ class UniformLayeredDiagram(Diagram):
         return '\n'.join(resList)
 
     def genEdge(self, step: int = None) -> str:
-        calcStr = lambda flow: f'node{self.topo.getInterRank(flow.send)}:{flow.send}:s -> node{self.topo.getInterRank(flow.recv)}:{flow.recv}:s [color={(flow.step) % 9 + 1}];'
+        calcStr = lambda flow: f'node{self.topo.getInterRank(flow.send)}:{flow.send}:s -> node{self.topo.getInterRank(flow.recv)}:{flow.recv}:s [color={(flow.step) % self.colorNum + 1}];'
         if step is not None:
             resList: list(str) = [
                 calcStr(flow) for flow in self.flows if flow.step == step
