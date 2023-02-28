@@ -2,15 +2,15 @@
 # @Author: yinwai
 # @Date:   2023-02-28 11:26:46
 # @Last Modified by:   yinwai
-# @Last Modified time: 2023-02-28 19:46:00
+# @Last Modified time: 2023-02-28 20:13:39
 
 from .Algorithm import Algorithm
 from CCRender.Topo import UniformLayeredTopo, Flow
 import math
 
-class ShiftedButterfly(Algorithm):
+class UniformShiftedButterfly(Algorithm):
     def __init__(self):
-        self.name: str = 'Shd'
+        self.name: str = 'UniShd'
 
     def commRecord(self, topo: UniformLayeredTopo) -> list(Flow(int, int, int)):
         nintraSteps = int(math.log2(topo.nintraRanks))
