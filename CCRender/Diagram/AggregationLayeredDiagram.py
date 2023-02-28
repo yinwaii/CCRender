@@ -2,7 +2,7 @@
 # @Author: yinwai
 # @Date:   2023-02-28 11:42:53
 # @Last Modified by:   yinwai
-# @Last Modified time: 2023-02-28 16:22:28
+# @Last Modified time: 2023-02-28 18:54:07
 
 from .Diagram import Diagram
 from CCRender.Topo import UniformLayeredTopo, Flow
@@ -19,14 +19,10 @@ class AggregationLayeredDiagram(Diagram):
 
     def genNode(self) -> str:
         radius: int = self.topo.ninterRanks // 2
-        calcX = lambda x: round(
-            math.cos(math.pi * 2 * x / self.topo.ninterRanks) * radius, 3)
-        calcY = lambda y: round(
-            math.sin(math.pi * 2 * y / self.topo.ninterRanks) * radius, 3)
+        calcX = lambda x: round(math.cos(math.pi * 2 * x / self.topo.ninterRanks) * radius, 3)
+        calcY = lambda y: round(math.sin(math.pi * 2 * y / self.topo.ninterRanks) * radius, 3)
         calcStr = lambda interRank: f'node{interRank} [pos="{calcX(interRank)},{calcY(interRank)}!"]'
-        resList: list(str) = [
-            calcStr(interRank) for interRank in range(self.topo.ninterRanks)
-        ]
+        resList: list(str) = [calcStr(interRank) for interRank in range(self.topo.ninterRanks)]
         return '\n'.join(resList)
 
     def genEdge(self, step: int = None) -> str:
