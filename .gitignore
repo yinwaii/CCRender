@@ -1,3 +1,6 @@
+# Output files
+fig
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
