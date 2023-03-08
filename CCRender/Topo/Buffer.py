@@ -2,7 +2,7 @@
 # @Author: yinwai
 # @Date:   2023-03-07 11:34:45
 # @Last Modified by:   yinwai
-# @Last Modified time: 2023-03-07 19:26:07
+# @Last Modified time: 2023-03-08 11:50:34
 
 import numpy as np
 
@@ -25,8 +25,6 @@ class Buffer:
         else:
             res[end:, :] = self.buffer[end:, :]
             res[:begin, :] = self.buffer[:begin, :]
-        print(f'begin {begin} end {end}')
-        # print(res)
         return Buffer(res)
 
     def __repr__(self):

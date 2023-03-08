@@ -1,1296 +1,324 @@
-begin 4 end 8
-send: 0 -> 1
-begin 0 end 4
-send: 1 -> 0
-begin 4 end 8
-send: 2 -> 3
-begin 0 end 4
 send: 3 -> 2
-begin 4 end 8
-send: 4 -> 5
-begin 0 end 4
-send: 5 -> 4
-begin 4 end 8
-send: 6 -> 7
-begin 0 end 4
-send: 7 -> 6
-recv: 0 <- 1
-recv: 1 <- 0
-recv: 2 <- 3
 recv: 3 <- 2
-recv: 4 <- 5
-recv: 5 <- 4
-recv: 6 <- 7
-recv: 7 <- 6
-begin 2 end 4
-send: 0 -> 6
-begin 6 end 8
-send: 1 -> 7
-begin 2 end 4
-send: 2 -> 4
-begin 6 end 8
-send: 3 -> 5
-begin 0 end 2
-send: 4 -> 2
-begin 4 end 6
-send: 5 -> 3
-begin 0 end 2
-send: 6 -> 0
-begin 4 end 6
-send: 7 -> 1
-recv: 0 <- 6
-recv: 1 <- 7
-recv: 2 <- 4
-recv: 3 <- 5
-recv: 4 <- 2
-recv: 5 <- 3
-recv: 6 <- 0
-recv: 7 <- 1
-begin 1 end 2
-send: 0 -> 4
-begin 5 end 6
-send: 1 -> 5
-begin 1 end 2
-send: 2 -> 6
-begin 5 end 6
-send: 3 -> 7
-begin 2 end 3
-send: 4 -> 0
-begin 6 end 7
-send: 5 -> 1
-begin 2 end 3
-send: 6 -> 2
-begin 6 end 7
-send: 7 -> 3
-recv: 0 <- 4
-recv: 1 <- 5
-recv: 2 <- 6
-recv: 3 <- 7
-recv: 4 <- 0
-recv: 5 <- 1
-recv: 6 <- 2
-recv: 7 <- 3
-node 0
-[[ True  True False False False False  True  True]
- [ True  True False False False False  True  True]
- [ True  True  True  True  True  True False False]
- [ True  True False False False False False False]
- [ True False False False False False False False]
- [ True False False False False False False False]
- [ True False False False False False False False]
- [ True False False False False False False False]]
-node 1
-[[False  True False False False False False False]
- [False  True False False False False False False]
- [False  True False False False False False False]
- [False  True False False False False False False]
- [ True  True False False False False  True  True]
- [ True  True False False False False  True  True]
- [ True  True  True  True  True  True False False]
- [ True  True False False False False False False]]
-node 2
-[[False False  True  True  True  True False False]
- [False False  True  True  True  True False False]
- [ True  True  True  True False False  True  True]
- [False False  True  True False False False False]
- [False False  True False False False False False]
- [False False  True False False False False False]
- [False False  True False False False False False]
- [False False  True False False False False False]]
-node 3
-[[False False False  True False False False False]
- [False False False  True False False False False]
- [False False False  True False False False False]
- [False False False  True False False False False]
- [False False  True  True  True  True False False]
- [False False  True  True  True  True False False]
- [ True  True  True  True False False  True  True]
- [False False  True  True False False False False]]
-begin 4 end 8
-send: 0 -> 1
-begin 0 end 4
-send: 1 -> 0
-begin 4 end 8
-send: 2 -> 3
-begin 0 end 4
-send: 3 -> 2
-begin 4 end 8
-send: 4 -> 5
-begin 0 end 4
-send: 5 -> 4
-begin 4 end 8
-send: 6 -> 7
-begin 0 end 4
-send: 7 -> 6
-recv: 0 <- 1
-recv: 1 <- 0
-recv: 2 <- 3
-recv: 3 <- 2
-recv: 4 <- 5
-recv: 5 <- 4
-recv: 6 <- 7
-recv: 7 <- 6
-begin 2 end 4
-send: 0 -> 6
-begin 6 end 8
-send: 1 -> 7
-begin 2 end 4
-send: 2 -> 4
-begin 6 end 8
-send: 3 -> 5
-begin 0 end 2
-send: 4 -> 2
-begin 4 end 6
-send: 5 -> 3
-begin 0 end 2
-send: 6 -> 0
-begin 4 end 6
-send: 7 -> 1
-recv: 0 <- 6
-recv: 1 <- 7
-recv: 2 <- 4
-recv: 3 <- 5
-recv: 4 <- 2
-recv: 5 <- 3
-recv: 6 <- 0
-recv: 7 <- 1
-begin 1 end 2
-send: 0 -> 4
-begin 5 end 6
-send: 1 -> 5
-begin 1 end 2
-send: 2 -> 6
-begin 5 end 6
-send: 3 -> 7
-begin 2 end 3
-send: 4 -> 0
-begin 6 end 7
-send: 5 -> 1
-begin 2 end 3
-send: 6 -> 2
-begin 6 end 7
-send: 7 -> 3
-recv: 0 <- 4
-recv: 1 <- 5
-recv: 2 <- 6
-recv: 3 <- 7
-recv: 4 <- 0
-recv: 5 <- 1
-recv: 6 <- 2
-recv: 7 <- 3
-node 0
-[[ True  True False False False False  True  True]
- [ True  True False False False False  True  True]
- [ True  True  True  True  True  True False False]
- [ True  True False False False False False False]
- [ True False False False False False False False]
- [ True False False False False False False False]
- [ True False False False False False False False]
- [ True False False False False False False False]]
-node 1
-[[False  True False False False False False False]
- [False  True False False False False False False]
- [False  True False False False False False False]
- [False  True False False False False False False]
- [ True  True False False False False  True  True]
- [ True  True False False False False  True  True]
- [ True  True  True  True  True  True False False]
- [ True  True False False False False False False]]
-node 2
-[[False False  True  True  True  True False False]
- [False False  True  True  True  True False False]
- [ True  True  True  True False False  True  True]
- [False False  True  True False False False False]
- [False False  True False False False False False]
- [False False  True False False False False False]
- [False False  True False False False False False]
- [False False  True False False False False False]]
-node 3
-[[False False False  True False False False False]
- [False False False  True False False False False]
- [False False False  True False False False False]
- [False False False  True False False False False]
- [False False  True  True  True  True False False]
- [False False  True  True  True  True False False]
- [ True  True  True  True False False  True  True]
- [False False  True  True False False False False]]
-begin 4 end 8
-send: 0 -> 1
-begin 0 end 4
-send: 1 -> 0
-begin 4 end 8
-send: 2 -> 3
-begin 0 end 4
-send: 3 -> 2
-begin 4 end 8
-send: 4 -> 5
-begin 0 end 4
-send: 5 -> 4
-begin 4 end 8
-send: 6 -> 7
-begin 0 end 4
-send: 7 -> 6
-recv: 0 <- 1
-recv: 1 <- 0
-recv: 2 <- 3
-recv: 3 <- 2
-recv: 4 <- 5
-recv: 5 <- 4
-recv: 6 <- 7
-recv: 7 <- 6
-begin 2 end 4
-send: 0 -> 6
-begin 6 end 8
-send: 1 -> 7
-begin 2 end 4
-send: 2 -> 4
-begin 6 end 8
-send: 3 -> 5
-begin 0 end 2
-send: 4 -> 2
-begin 4 end 6
-send: 5 -> 3
-begin 0 end 2
-send: 6 -> 0
-begin 4 end 6
-send: 7 -> 1
-recv: 0 <- 6
-recv: 1 <- 7
-recv: 2 <- 4
-recv: 3 <- 5
-recv: 4 <- 2
-recv: 5 <- 3
-recv: 6 <- 0
-recv: 7 <- 1
-begin 1 end 2
-send: 0 -> 4
-begin 5 end 6
-send: 1 -> 5
-begin 1 end 2
-send: 2 -> 6
-begin 5 end 6
-send: 3 -> 7
-begin 2 end 3
-send: 4 -> 0
-begin 6 end 7
-send: 5 -> 1
-begin 2 end 3
-send: 6 -> 2
-begin 6 end 7
-send: 7 -> 3
-recv: 0 <- 4
-recv: 1 <- 5
-recv: 2 <- 6
-recv: 3 <- 7
-recv: 4 <- 0
-recv: 5 <- 1
-recv: 6 <- 2
-recv: 7 <- 3
-node 0
-[[ True  True False False False False  True  True]
- [ True  True False False False False  True  True]
- [ True  True  True  True  True  True False False]
- [ True  True False False False False False False]
- [ True False False False False False False False]
- [ True False False False False False False False]
- [ True False False False False False False False]
- [ True False False False False False False False]]
-node 1
-[[False  True False False False False False False]
- [False  True False False False False False False]
- [False  True False False False False False False]
- [False  True False False False False False False]
- [ True  True False False False False  True  True]
- [ True  True False False False False  True  True]
- [ True  True  True  True  True  True False False]
- [ True  True False False False False False False]]
-node 2
-[[False False  True  True  True  True False False]
- [False False  True  True  True  True False False]
- [ True  True  True  True False False  True  True]
- [False False  True  True False False False False]
- [False False  True False False False False False]
- [False False  True False False False False False]
- [False False  True False False False False False]
- [False False  True False False False False False]]
-node 3
-[[False False False  True False False False False]
- [False False False  True False False False False]
- [False False False  True False False False False]
- [False False False  True False False False False]
- [False False  True  True  True  True False False]
- [False False  True  True  True  True False False]
- [ True  True  True  True False False  True  True]
- [False False  True  True False False False False]]
-begin 4 end 8
-send: 0 -> 1
-begin 0 end 4
-send: 1 -> 0
-begin 4 end 8
-send: 2 -> 3
-begin 0 end 4
-send: 3 -> 2
-begin 4 end 8
-send: 4 -> 5
-begin 0 end 4
-send: 5 -> 4
-begin 4 end 8
-send: 6 -> 7
-begin 0 end 4
-send: 7 -> 6
-recv: 0 <- 1
-recv: 1 <- 0
-recv: 2 <- 3
-recv: 3 <- 2
-recv: 4 <- 5
-recv: 5 <- 4
-recv: 6 <- 7
-recv: 7 <- 6
-begin 2 end 4
-send: 0 -> 6
-begin 6 end 8
-send: 1 -> 3
-begin 2 end 4
-send: 2 -> 4
-begin 4 end 6
+node 3 in step 1
+[[0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0]]
 send: 3 -> 1
-begin 0 end 2
-send: 4 -> 2
-begin 6 end 8
-send: 5 -> 7
-begin 0 end 2
-send: 6 -> 0
-begin 4 end 6
-send: 7 -> 5
-recv: 0 <- 6
-recv: 1 <- 3
-recv: 2 <- 4
 recv: 3 <- 1
-recv: 4 <- 2
-recv: 5 <- 7
-recv: 6 <- 0
-recv: 7 <- 5
-begin 1 end 2
-send: 0 -> 4
-begin 5 end 6
-send: 1 -> 5
-begin 1 end 2
-send: 2 -> 6
-begin 7 end 8
-send: 3 -> 7
-begin 2 end 3
-send: 4 -> 0
-begin 4 end 5
-send: 5 -> 1
-begin 2 end 3
-send: 6 -> 2
-begin 6 end 7
-send: 7 -> 3
-recv: 0 <- 4
-recv: 1 <- 5
-recv: 2 <- 6
-recv: 3 <- 7
-recv: 4 <- 0
-recv: 5 <- 1
-recv: 6 <- 2
-recv: 7 <- 3
-node 0
-[[ True  True False False False False  True  True]
- [ True  True False False False False  True  True]
- [ True  True  True  True  True  True False False]
- [ True  True False False False False False False]
- [ True False False False False False False False]
- [ True False False False False False False False]
- [ True False False False False False False False]
- [ True False False False False False False False]]
-node 1
-[[False  True False False False False False False]
- [False  True False False False False False False]
- [False  True False False False False False False]
- [False  True False False False False False False]
- [ True  True  True  True  True  True  True  True]
- [ True  True  True  True False False False False]
- [ True  True False False False False False False]
- [ True  True False False False False False False]]
-node 2
-[[False False  True  True  True  True False False]
- [False False  True  True  True  True False False]
- [ True  True  True  True False False  True  True]
- [False False  True  True False False False False]
- [False False  True False False False False False]
- [False False  True False False False False False]
- [False False  True False False False False False]
- [False False  True False False False False False]]
-node 3
-[[False False False  True False False False False]
- [False False False  True False False False False]
- [False False False  True False False False False]
- [False False False  True False False False False]
- [False False  True  True False False False False]
- [False False  True  True False False False False]
- [ True  True  True  True  True  True  True  True]
- [ True  True  True  True False False False False]]
-begin 4 end 8
-send: 0 -> 1
-begin 0 end 4
-send: 1 -> 0
-begin 4 end 8
-send: 2 -> 3
-begin 0 end 4
-send: 3 -> 2
-begin 4 end 8
-send: 4 -> 5
-begin 0 end 4
-send: 5 -> 4
-begin 4 end 8
-send: 6 -> 7
-begin 0 end 4
+node 3 in step 2
+[[0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0]]
+node send from 12 to 14
+send: 3 -> 11
+node recv from 14 to 16
+recv: 3 <- 11
+node 3 in step 3
+[[0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [1 1 1 1 0 0 0 0 1 1 1 1 0 0 0 0]
+ [1 1 1 1 0 0 0 0 1 1 1 1 0 0 0 0]
+ [1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0]]
+node send from 14 to 15
+send: 3 -> 15
+node recv from 15 to 16
+recv: 3 <- 15
+node 3 in step 4
+[[0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [1 1 1 1 0 0 0 0 1 1 1 1 0 0 0 0]
+ [1 1 1 1 0 0 0 0 1 1 1 1 0 0 0 0]
+ [1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0]
+ [1 1 1 1 0 0 0 0 0 0 0 0 1 1 1 1]]
+
 send: 7 -> 6
-recv: 0 <- 1
-recv: 1 <- 0
-recv: 2 <- 3
-recv: 3 <- 2
-recv: 4 <- 5
-recv: 5 <- 4
-recv: 6 <- 7
 recv: 7 <- 6
-begin 2 end 4
-send: 0 -> 6
-begin 6 end 8
-send: 1 -> 3
-begin 2 end 4
-send: 2 -> 4
-begin 4 end 6
-send: 3 -> 1
-begin 0 end 2
-send: 4 -> 2
-begin 6 end 8
-send: 5 -> 7
-begin 0 end 2
-send: 6 -> 0
-begin 4 end 6
+node 7 in step 1
+[[0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0]]
 send: 7 -> 5
-recv: 0 <- 6
-recv: 1 <- 3
-recv: 2 <- 4
-recv: 3 <- 1
-recv: 4 <- 2
-recv: 5 <- 7
-recv: 6 <- 0
 recv: 7 <- 5
-begin 1 end 2
-send: 0 -> 4
-begin 5 end 6
-send: 1 -> 5
-begin 1 end 2
-send: 2 -> 6
-begin 7 end 8
-send: 3 -> 7
-begin 2 end 3
-send: 4 -> 0
-begin 4 end 5
-send: 5 -> 1
-begin 2 end 3
-send: 6 -> 2
-begin 6 end 7
-send: 7 -> 3
-recv: 0 <- 4
-recv: 1 <- 5
-recv: 2 <- 6
-recv: 3 <- 7
-recv: 4 <- 0
-recv: 5 <- 1
-recv: 6 <- 2
-recv: 7 <- 3
-node 0
-[[ True  True False False False False  True  True]
- [ True  True False False False False  True  True]
- [ True  True  True  True  True  True False False]
- [ True  True False False False False False False]
- [ True False False False False False False False]
- [ True False False False False False False False]
- [ True False False False False False False False]
- [ True False False False False False False False]]
-node 1
-[[False  True False False False False False False]
- [False  True False False False False False False]
- [False  True False False False False False False]
- [False  True False False False False False False]
- [ True  True  True  True  True  True  True  True]
- [ True  True  True  True False False False False]
- [ True  True False False False False False False]
- [ True  True False False False False False False]]
-node 2
-[[False False  True  True  True  True False False]
- [False False  True  True  True  True False False]
- [ True  True  True  True False False  True  True]
- [False False  True  True False False False False]
- [False False  True False False False False False]
- [False False  True False False False False False]
- [False False  True False False False False False]
- [False False  True False False False False False]]
-node 3
-[[False False False  True False False False False]
- [False False False  True False False False False]
- [False False False  True False False False False]
- [False False False  True False False False False]
- [False False  True  True False False False False]
- [False False  True  True False False False False]
- [ True  True  True  True  True  True  True  True]
- [ True  True  True  True False False False False]]
-begin 4 end 8
-send: 0 -> 1
-begin 0 end 4
-send: 1 -> 0
-begin 4 end 8
-send: 2 -> 3
-begin 0 end 4
-send: 3 -> 2
-begin 4 end 8
-send: 4 -> 5
-begin 0 end 4
-send: 5 -> 4
-begin 4 end 8
-send: 6 -> 7
-begin 0 end 4
-send: 7 -> 6
-recv: 0 <- 1
-recv: 1 <- 0
-recv: 2 <- 3
-recv: 3 <- 2
-recv: 4 <- 5
-recv: 5 <- 4
-recv: 6 <- 7
-recv: 7 <- 6
-begin 2 end 4
-send: 0 -> 6
-begin 6 end 8
-send: 1 -> 3
-begin 2 end 4
-send: 2 -> 4
-begin 4 end 6
-send: 3 -> 1
-begin 0 end 2
-send: 4 -> 2
-begin 6 end 8
-send: 5 -> 7
-begin 0 end 2
-send: 6 -> 0
-begin 4 end 6
-send: 7 -> 5
-recv: 0 <- 6
-recv: 1 <- 3
-recv: 2 <- 4
-recv: 3 <- 1
-recv: 4 <- 2
-recv: 5 <- 7
-recv: 6 <- 0
-recv: 7 <- 5
-begin 1 end 2
-send: 0 -> 4
-begin 5 end 6
-send: 1 -> 5
-begin 1 end 2
-send: 2 -> 6
-begin 7 end 8
-send: 3 -> 7
-begin 2 end 3
-send: 4 -> 0
-begin 4 end 5
-send: 5 -> 1
-begin 2 end 3
-send: 6 -> 2
-begin 6 end 7
-send: 7 -> 3
-recv: 0 <- 4
-recv: 1 <- 5
-recv: 2 <- 6
-recv: 3 <- 7
-recv: 4 <- 0
-recv: 5 <- 1
-recv: 6 <- 2
-recv: 7 <- 3
-node 0
-[[ True  True False False False False  True  True]
- [ True  True False False False False  True  True]
- [ True  True  True  True  True  True False False]
- [ True  True False False False False False False]
- [ True False False False False False False False]
- [ True False False False False False False False]
- [ True False False False False False False False]
- [ True False False False False False False False]]
-node 1
-[[False  True False False False False False False]
- [False  True False False False False False False]
- [False  True False False False False False False]
- [False  True False False False False False False]
- [ True  True  True  True  True  True  True  True]
- [ True  True  True  True False False False False]
- [ True  True False False False False False False]
- [ True  True False False False False False False]]
-node 2
-[[False False  True  True  True  True False False]
- [False False  True  True  True  True False False]
- [ True  True  True  True False False  True  True]
- [False False  True  True False False False False]
- [False False  True False False False False False]
- [False False  True False False False False False]
- [False False  True False False False False False]
- [False False  True False False False False False]]
-node 3
-[[False False False  True False False False False]
- [False False False  True False False False False]
- [False False False  True False False False False]
- [False False False  True False False False False]
- [False False  True  True False False False False]
- [False False  True  True False False False False]
- [ True  True  True  True  True  True  True  True]
- [ True  True  True  True False False False False]]
-begin 4 end 8
-send: 0 -> 1
-begin 0 end 4
-send: 1 -> 0
-begin 4 end 8
-send: 2 -> 3
-begin 0 end 4
-send: 3 -> 2
-begin 4 end 8
-send: 4 -> 5
-begin 0 end 4
-send: 5 -> 4
-begin 4 end 8
-send: 6 -> 7
-begin 0 end 4
-send: 7 -> 6
-recv: 0 <- 1
-recv: 1 <- 0
-recv: 2 <- 3
-recv: 3 <- 2
-recv: 4 <- 5
-recv: 5 <- 4
-recv: 6 <- 7
-recv: 7 <- 6
-begin 2 end 4
-send: 0 -> 6
-begin 6 end 8
-send: 1 -> 5
-begin 2 end 4
-send: 2 -> 4
-begin 6 end 8
-send: 3 -> 7
-begin 0 end 2
-send: 4 -> 2
-begin 4 end 6
-send: 5 -> 1
-begin 0 end 2
-send: 6 -> 0
-begin 4 end 6
-send: 7 -> 3
-recv: 0 <- 6
-recv: 1 <- 5
-recv: 2 <- 4
-recv: 3 <- 7
-recv: 4 <- 2
-recv: 5 <- 1
-recv: 6 <- 0
-recv: 7 <- 3
-begin 1 end 2
-send: 0 -> 4
-begin 5 end 6
-send: 1 -> 7
-begin 1 end 2
-send: 2 -> 6
-begin 5 end 6
-send: 3 -> 5
-begin 2 end 3
-send: 4 -> 0
-begin 6 end 7
-send: 5 -> 3
-begin 2 end 3
-send: 6 -> 2
-begin 6 end 7
-send: 7 -> 1
-recv: 0 <- 4
-recv: 1 <- 7
-recv: 2 <- 6
-recv: 3 <- 5
-recv: 4 <- 0
-recv: 5 <- 3
-recv: 6 <- 2
-recv: 7 <- 1
-node 0
-[[ True  True False False False False  True  True]
- [ True  True False False False False  True  True]
- [ True  True  True  True  True  True False False]
- [ True  True False False False False False False]
- [ True False False False False False False False]
- [ True False False False False False False False]
- [ True False False False False False False False]
- [ True False False False False False False False]]
-node 1
-[[False  True False False False False False False]
- [False  True False False False False False False]
- [False  True False False False False False False]
- [False  True False False False False False False]
- [ True  True False False  True  True False False]
- [ True  True False False  True  True False False]
- [ True  True  True  True False False  True  True]
- [ True  True False False False False False False]]
-node 2
-[[False False  True  True  True  True False False]
- [False False  True  True  True  True False False]
- [ True  True  True  True False False  True  True]
- [False False  True  True False False False False]
- [False False  True False False False False False]
- [False False  True False False False False False]
- [False False  True False False False False False]
- [False False  True False False False False False]]
-node 3
-[[False False False  True False False False False]
- [False False False  True False False False False]
- [False False False  True False False False False]
- [False False False  True False False False False]
- [False False  True  True False False  True  True]
- [False False  True  True False False  True  True]
- [ True  True  True  True  True  True False False]
- [False False  True  True False False False False]]
-begin 4 end 8
-send: 0 -> 1
-begin 0 end 4
-send: 1 -> 0
-begin 4 end 8
-send: 2 -> 3
-begin 0 end 4
-send: 3 -> 2
-begin 4 end 8
-send: 4 -> 5
-begin 0 end 4
-send: 5 -> 4
-begin 4 end 8
-send: 6 -> 7
-begin 0 end 4
-send: 7 -> 6
-recv: 0 <- 1
-recv: 1 <- 0
-recv: 2 <- 3
-recv: 3 <- 2
-recv: 4 <- 5
-recv: 5 <- 4
-recv: 6 <- 7
-recv: 7 <- 6
-begin 2 end 4
-send: 0 -> 6
-begin 6 end 8
-send: 1 -> 5
-begin 2 end 4
-send: 2 -> 4
-begin 6 end 8
-send: 3 -> 7
-begin 0 end 2
-send: 4 -> 2
-begin 4 end 6
-send: 5 -> 1
-begin 0 end 2
-send: 6 -> 0
-begin 4 end 6
-send: 7 -> 3
-recv: 0 <- 6
-recv: 1 <- 5
-recv: 2 <- 4
-recv: 3 <- 7
-recv: 4 <- 2
-recv: 5 <- 1
-recv: 6 <- 0
-recv: 7 <- 3
-begin 1 end 2
-send: 0 -> 4
-begin 5 end 6
-send: 1 -> 7
-begin 1 end 2
-send: 2 -> 6
-begin 5 end 6
-send: 3 -> 5
-begin 2 end 3
-send: 4 -> 0
-begin 6 end 7
-send: 5 -> 3
-begin 2 end 3
-send: 6 -> 2
-begin 6 end 7
-send: 7 -> 1
-recv: 0 <- 4
-recv: 1 <- 7
-recv: 2 <- 6
-recv: 3 <- 5
-recv: 4 <- 0
-recv: 5 <- 3
-recv: 6 <- 2
-recv: 7 <- 1
-node 0
-[[ True  True False False False False  True  True]
- [ True  True False False False False  True  True]
- [ True  True  True  True  True  True False False]
- [ True  True False False False False False False]
- [ True False False False False False False False]
- [ True False False False False False False False]
- [ True False False False False False False False]
- [ True False False False False False False False]]
-node 1
-[[False  True False False False False False False]
- [False  True False False False False False False]
- [False  True False False False False False False]
- [False  True False False False False False False]
- [ True  True False False  True  True False False]
- [ True  True False False  True  True False False]
- [ True  True  True  True False False  True  True]
- [ True  True False False False False False False]]
-node 2
-[[False False  True  True  True  True False False]
- [False False  True  True  True  True False False]
- [ True  True  True  True False False  True  True]
- [False False  True  True False False False False]
- [False False  True False False False False False]
- [False False  True False False False False False]
- [False False  True False False False False False]
- [False False  True False False False False False]]
-node 3
-[[False False False  True False False False False]
- [False False False  True False False False False]
- [False False False  True False False False False]
- [False False False  True False False False False]
- [False False  True  True False False  True  True]
- [False False  True  True False False  True  True]
- [ True  True  True  True  True  True False False]
- [False False  True  True False False False False]]
-begin 4 end 8
-send: 0 -> 1
-begin 0 end 4
-send: 1 -> 0
-begin 4 end 8
-send: 2 -> 3
-begin 0 end 4
-send: 3 -> 2
-begin 4 end 8
-send: 4 -> 5
-begin 0 end 4
-send: 5 -> 4
-begin 4 end 8
-send: 6 -> 7
-begin 0 end 4
-send: 7 -> 6
-recv: 0 <- 1
-recv: 1 <- 0
-recv: 2 <- 3
-recv: 3 <- 2
-recv: 4 <- 5
-recv: 5 <- 4
-recv: 6 <- 7
-recv: 7 <- 6
-begin 2 end 4
-send: 0 -> 6
-begin 6 end 8
-send: 1 -> 5
-begin 2 end 4
-send: 2 -> 4
-begin 6 end 8
-send: 3 -> 7
-begin 0 end 2
-send: 4 -> 2
-begin 4 end 6
-send: 5 -> 1
-begin 0 end 2
-send: 6 -> 0
-begin 4 end 6
-send: 7 -> 3
-recv: 0 <- 6
-recv: 1 <- 5
-recv: 2 <- 4
-recv: 3 <- 7
-recv: 4 <- 2
-recv: 5 <- 1
-recv: 6 <- 0
-recv: 7 <- 3
-begin 1 end 2
-send: 0 -> 4
-begin 5 end 6
-send: 1 -> 7
-begin 1 end 2
-send: 2 -> 6
-begin 5 end 6
-send: 3 -> 5
-begin 2 end 3
-send: 4 -> 0
-begin 6 end 7
-send: 5 -> 3
-begin 2 end 3
-send: 6 -> 2
-begin 6 end 7
-send: 7 -> 1
-recv: 0 <- 4
-recv: 1 <- 7
-recv: 2 <- 6
-recv: 3 <- 5
-recv: 4 <- 0
-recv: 5 <- 3
-recv: 6 <- 2
-recv: 7 <- 1
-node 0
-[[ True  True False False False False  True  True]
- [ True  True False False False False  True  True]
- [ True  True  True  True  True  True False False]
- [ True  True False False False False False False]
- [ True False False False False False False False]
- [ True False False False False False False False]
- [ True False False False False False False False]
- [ True False False False False False False False]]
-node 1
-[[False  True False False False False False False]
- [False  True False False False False False False]
- [False  True False False False False False False]
- [False  True False False False False False False]
- [ True  True False False  True  True False False]
- [ True  True False False  True  True False False]
- [ True  True  True  True False False  True  True]
- [ True  True False False False False False False]]
-node 2
-[[False False  True  True  True  True False False]
- [False False  True  True  True  True False False]
- [ True  True  True  True False False  True  True]
- [False False  True  True False False False False]
- [False False  True False False False False False]
- [False False  True False False False False False]
- [False False  True False False False False False]
- [False False  True False False False False False]]
-node 3
-[[False False False  True False False False False]
- [False False False  True False False False False]
- [False False False  True False False False False]
- [False False False  True False False False False]
- [False False  True  True False False  True  True]
- [False False  True  True False False  True  True]
- [ True  True  True  True  True  True False False]
- [False False  True  True False False False False]]
-begin 4 end 8
-send: 0 -> 1
-begin 0 end 4
-send: 1 -> 0
-begin 4 end 8
-send: 2 -> 3
-begin 0 end 4
-send: 3 -> 2
-begin 4 end 8
-send: 4 -> 5
-begin 0 end 4
-send: 5 -> 4
-begin 4 end 8
-send: 6 -> 7
-begin 0 end 4
-send: 7 -> 6
-recv: 0 <- 1
-recv: 1 <- 0
-recv: 2 <- 3
-recv: 3 <- 2
-recv: 4 <- 5
-recv: 5 <- 4
-recv: 6 <- 7
-recv: 7 <- 6
-begin 2 end 4
-send: 0 -> 6
-begin 6 end 8
-send: 1 -> 5
-begin 2 end 4
-send: 2 -> 4
-begin 6 end 8
-send: 3 -> 7
-begin 0 end 2
-send: 4 -> 2
-begin 4 end 6
-send: 5 -> 1
-begin 0 end 2
-send: 6 -> 0
-begin 4 end 6
-send: 7 -> 3
-recv: 0 <- 6
-recv: 1 <- 5
-recv: 2 <- 4
-recv: 3 <- 7
-recv: 4 <- 2
-recv: 5 <- 1
-recv: 6 <- 0
-recv: 7 <- 3
-begin 1 end 2
-send: 0 -> 4
-begin 5 end 6
-send: 1 -> 3
-begin 1 end 2
-send: 2 -> 6
-begin 4 end 5
-send: 3 -> 1
-begin 2 end 3
-send: 4 -> 0
-begin 7 end 8
-send: 5 -> 7
-begin 2 end 3
-send: 6 -> 2
-begin 6 end 7
-send: 7 -> 5
-recv: 0 <- 4
-recv: 1 <- 3
-recv: 2 <- 6
-recv: 3 <- 1
-recv: 4 <- 0
-recv: 5 <- 7
-recv: 6 <- 2
-recv: 7 <- 5
-node 0
-[[ True  True False False False False  True  True]
- [ True  True False False False False  True  True]
- [ True  True  True  True  True  True False False]
- [ True  True False False False False False False]
- [ True False False False False False False False]
- [ True False False False False False False False]
- [ True False False False False False False False]
- [ True False False False False False False False]]
-node 1
-[[False  True False False False False False False]
- [False  True False False False False False False]
- [False  True False False False False False False]
- [False  True False False False False False False]
- [ True  True  True  True  True  True  True  True]
- [ True  True False False  True  True False False]
- [ True  True False False False False False False]
- [ True  True False False False False False False]]
-node 2
-[[False False  True  True  True  True False False]
- [False False  True  True  True  True False False]
- [ True  True  True  True False False  True  True]
- [False False  True  True False False False False]
- [False False  True False False False False False]
- [False False  True False False False False False]
- [False False  True False False False False False]
- [False False  True False False False False False]]
-node 3
-[[False False False  True False False False False]
- [False False False  True False False False False]
- [False False False  True False False False False]
- [False False False  True False False False False]
- [False False  True  True False False  True  True]
- [ True  True  True  True  True  True  True  True]
- [False False  True  True False False False False]
- [False False  True  True False False False False]]
-begin 4 end 8
-send: 0 -> 1
-begin 0 end 4
-send: 1 -> 0
-begin 4 end 8
-send: 2 -> 3
-begin 0 end 4
-send: 3 -> 2
-begin 4 end 8
-send: 4 -> 5
-begin 0 end 4
-send: 5 -> 4
-begin 4 end 8
-send: 6 -> 7
-begin 0 end 4
-send: 7 -> 6
-recv: 0 <- 1
-recv: 1 <- 0
-recv: 2 <- 3
-recv: 3 <- 2
-recv: 4 <- 5
-recv: 5 <- 4
-recv: 6 <- 7
-recv: 7 <- 6
-begin 2 end 4
-send: 0 -> 6
-begin 6 end 8
-send: 1 -> 5
-begin 2 end 4
-send: 2 -> 4
-begin 6 end 8
-send: 3 -> 7
-begin 0 end 2
-send: 4 -> 2
-begin 4 end 6
-send: 5 -> 1
-begin 0 end 2
-send: 6 -> 0
-begin 4 end 6
-send: 7 -> 3
-recv: 0 <- 6
-recv: 1 <- 5
-recv: 2 <- 4
-recv: 3 <- 7
-recv: 4 <- 2
-recv: 5 <- 1
-recv: 6 <- 0
-recv: 7 <- 3
-begin 1 end 2
-send: 0 -> 4
-begin 5 end 6
-send: 1 -> 3
-begin 1 end 2
-send: 2 -> 6
-begin 4 end 5
-send: 3 -> 1
-begin 2 end 3
-send: 4 -> 0
-begin 7 end 8
-send: 5 -> 7
-begin 2 end 3
-send: 6 -> 2
-begin 6 end 7
-send: 7 -> 5
-recv: 0 <- 4
-recv: 1 <- 3
-recv: 2 <- 6
-recv: 3 <- 1
-recv: 4 <- 0
-recv: 5 <- 7
-recv: 6 <- 2
-recv: 7 <- 5
-node 0
-[[ True  True False False False False  True  True]
- [ True  True False False False False  True  True]
- [ True  True  True  True  True  True False False]
- [ True  True False False False False False False]
- [ True False False False False False False False]
- [ True False False False False False False False]
- [ True False False False False False False False]
- [ True False False False False False False False]]
-node 1
-[[False  True False False False False False False]
- [False  True False False False False False False]
- [False  True False False False False False False]
- [False  True False False False False False False]
- [ True  True  True  True  True  True  True  True]
- [ True  True False False  True  True False False]
- [ True  True False False False False False False]
- [ True  True False False False False False False]]
-node 2
-[[False False  True  True  True  True False False]
- [False False  True  True  True  True False False]
- [ True  True  True  True False False  True  True]
- [False False  True  True False False False False]
- [False False  True False False False False False]
- [False False  True False False False False False]
- [False False  True False False False False False]
- [False False  True False False False False False]]
-node 3
-[[False False False  True False False False False]
- [False False False  True False False False False]
- [False False False  True False False False False]
- [False False False  True False False False False]
- [False False  True  True False False  True  True]
- [ True  True  True  True  True  True  True  True]
- [False False  True  True False False False False]
- [False False  True  True False False False False]]
-begin 4 end 8
-send: 0 -> 1
-begin 0 end 4
-send: 1 -> 0
-begin 4 end 8
-send: 2 -> 3
-begin 0 end 4
-send: 3 -> 2
-begin 4 end 8
-send: 4 -> 5
-begin 0 end 4
-send: 5 -> 4
-begin 4 end 8
-send: 6 -> 7
-begin 0 end 4
-send: 7 -> 6
-recv: 0 <- 1
-recv: 1 <- 0
-recv: 2 <- 3
-recv: 3 <- 2
-recv: 4 <- 5
-recv: 5 <- 4
-recv: 6 <- 7
-recv: 7 <- 6
-begin 2 end 4
-send: 0 -> 6
-begin 6 end 8
-send: 1 -> 5
-begin 2 end 4
-send: 2 -> 4
-begin 6 end 8
-send: 3 -> 7
-begin 0 end 2
-send: 4 -> 2
-begin 4 end 6
-send: 5 -> 1
-begin 0 end 2
-send: 6 -> 0
-begin 4 end 6
-send: 7 -> 3
-recv: 0 <- 6
-recv: 1 <- 5
-recv: 2 <- 4
-recv: 3 <- 7
-recv: 4 <- 2
-recv: 5 <- 1
-recv: 6 <- 0
-recv: 7 <- 3
-begin 1 end 2
-send: 0 -> 4
-begin 5 end 6
-send: 1 -> 3
-begin 1 end 2
-send: 2 -> 6
-begin 4 end 5
-send: 3 -> 1
-begin 2 end 3
-send: 4 -> 0
-begin 7 end 8
-send: 5 -> 7
-begin 2 end 3
-send: 6 -> 2
-begin 6 end 7
-send: 7 -> 5
-recv: 0 <- 4
-recv: 1 <- 3
-recv: 2 <- 6
-recv: 3 <- 1
-recv: 4 <- 0
-recv: 5 <- 7
-recv: 6 <- 2
-recv: 7 <- 5
-node 0
-[[ True  True False False False False  True  True]
- [ True  True False False False False  True  True]
- [ True  True  True  True  True  True False False]
- [ True  True False False False False False False]
- [ True False False False False False False False]
- [ True False False False False False False False]
- [ True False False False False False False False]
- [ True False False False False False False False]]
-node 1
-[[False  True False False False False False False]
- [False  True False False False False False False]
- [False  True False False False False False False]
- [False  True False False False False False False]
- [ True  True  True  True  True  True  True  True]
- [ True  True False False  True  True False False]
- [ True  True False False False False False False]
- [ True  True False False False False False False]]
-node 2
-[[False False  True  True  True  True False False]
- [False False  True  True  True  True False False]
- [ True  True  True  True False False  True  True]
- [False False  True  True False False False False]
- [False False  True False False False False False]
- [False False  True False False False False False]
- [False False  True False False False False False]
- [False False  True False False False False False]]
-node 3
-[[False False False  True False False False False]
- [False False False  True False False False False]
- [False False False  True False False False False]
- [False False False  True False False False False]
- [False False  True  True False False  True  True]
- [ True  True  True  True  True  True  True  True]
- [False False  True  True False False False False]
- [False False  True  True False False False False]]
+node 7 in step 2
+[[0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 1 1 1 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 1 1 1 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 1 1 1 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 1 1 1 1 0 0 0 0 0 0 0 0]]
+node send from 12 to 14
+send: 7 -> 15
+node recv from 14 to 16
+recv: 7 <- 15
+node 7 in step 3
+[[0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 1 1 1 1 0 0 0 0 1 1 1 1]
+ [0 0 0 0 1 1 1 1 0 0 0 0 1 1 1 1]
+ [0 0 0 0 1 1 1 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 1 1 1 1 0 0 0 0 0 0 0 0]]
+node send from 15 to 16
+send: 7 -> 11
+node recv from 14 to 15
+recv: 7 <- 11
+node 7 in step 4
+[[0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 1 1 1 1 0 0 0 0 1 1 1 1]
+ [0 0 0 0 1 1 1 1 0 0 0 0 1 1 1 1]
+ [0 0 0 0 1 1 1 1 1 1 1 1 0 0 0 0]
+ [0 0 0 0 1 1 1 1 0 0 0 0 0 0 0 0]]
+
+send: 11 -> 10
+recv: 11 <- 10
+node 11 in step 1
+[[0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0]]
+send: 11 -> 9
+recv: 11 <- 9
+node 11 in step 2
+[[0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 1 1 1 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 1 1 1 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 1 1 1 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 1 1 1 1 0 0 0 0]]
+node send from 12 to 14
+send: 11 -> 3
+node recv from 14 to 16
+recv: 11 <- 3
+node 11 in step 3
+[[0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0]
+ [1 1 1 1 0 0 0 0 1 1 1 1 0 0 0 0]
+ [1 1 1 1 0 0 0 0 1 1 1 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 1 1 1 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 1 1 1 1 0 0 0 0]]
+node send from 14 to 15
+send: 11 -> 7
+node recv from 15 to 16
+recv: 11 <- 7
+node 11 in step 4
+[[0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0]
+ [1 1 1 1 0 0 0 0 1 1 1 1 0 0 0 0]
+ [1 1 1 1 0 0 0 0 1 1 1 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 1 1 1 1 0 0 0 0]
+ [0 0 0 0 1 1 1 1 1 1 1 1 0 0 0 0]]
+
+send: 15 -> 14
+recv: 15 <- 14
+node 15 in step 1
+[[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1]
+ [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1]
+ [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1]
+ [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1]
+ [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1]
+ [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1]
+ [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1]
+ [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1]
+ [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1]
+ [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1]
+ [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1]
+ [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1]
+ [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1]
+ [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1]
+ [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1]
+ [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1]]
+send: 15 -> 13
+recv: 15 <- 13
+node 15 in step 2
+[[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1]
+ [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1]
+ [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1]
+ [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1]
+ [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1]
+ [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1]
+ [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1]
+ [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1]
+ [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1]
+ [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1]
+ [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1]
+ [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1]
+ [0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1]
+ [0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1]
+ [0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1]
+ [0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1]]
+node send from 12 to 14
+send: 15 -> 7
+node recv from 14 to 16
+recv: 15 <- 7
+node 15 in step 3
+[[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1]
+ [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1]
+ [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1]
+ [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1]
+ [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1]
+ [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1]
+ [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1]
+ [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1]
+ [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1]
+ [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1]
+ [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1]
+ [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1]
+ [0 0 0 0 1 1 1 1 0 0 0 0 1 1 1 1]
+ [0 0 0 0 1 1 1 1 0 0 0 0 1 1 1 1]
+ [0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1]
+ [0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1]]
+node send from 15 to 16
+send: 15 -> 3
+node recv from 14 to 15
+recv: 15 <- 3
+node 15 in step 4
+[[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1]
+ [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1]
+ [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1]
+ [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1]
+ [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1]
+ [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1]
+ [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1]
+ [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1]
+ [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1]
+ [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1]
+ [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1]
+ [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1]
+ [0 0 0 0 1 1 1 1 0 0 0 0 1 1 1 1]
+ [0 0 0 0 1 1 1 1 0 0 0 0 1 1 1 1]
+ [1 1 1 1 0 0 0 0 0 0 0 0 1 1 1 1]
+ [0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1]]
+
