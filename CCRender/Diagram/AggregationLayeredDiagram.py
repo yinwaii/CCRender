@@ -2,10 +2,10 @@
 # @Author: yinwai
 # @Date:   2023-02-28 11:42:53
 # @Last Modified by:   yinwai
-# @Last Modified time: 2023-02-28 18:54:07
+# @Last Modified time: 2023-03-07 18:41:36
 
 from .Diagram import Diagram
-from CCRender.Topo import UniformLayeredTopo, Flow
+from CCRender.Topo import UniformLayeredTopo, Flows, Flow
 from CCRender.Algo import Algorithm
 import math
 import numpy as np

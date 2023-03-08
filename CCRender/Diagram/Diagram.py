@@ -2,7 +2,7 @@
 # @Author: yinwai
 # @Date:   2023-02-28 10:25:57
 # @Last Modified by:   yinwai
-# @Last Modified time: 2023-02-28 20:05:29
+# @Last Modified time: 2023-03-07 18:42:58
 
 from CCRender.Topo import Topo
 from CCRender.Algo import Algorithm
@@ -12,8 +12,8 @@ class Diagram():
     def __init__(self, topo: Topo, algo: Algorithm):
         self.topo: Topo = topo
         self.algo: Algorithm = algo
-        self.flows: list(Flow(int, int, int)) = algo.commRecord(topo)
-        self.maxStep: int = max([flow.step for flow in self.flows])
+        self.flows: list(Flow) = algo.commRecord(topo)
+        self.maxStep: int = max([node.step for node in self.topo.nodes]) - 1
         self.colorNum: int = 8
         self.name: str = ''
 
