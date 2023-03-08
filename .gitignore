@@ -1,6 +1,7 @@
 # Output files
 fig
 log
+out
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -2,7 +2,7 @@
 # @Author: yinwai
 # @Date:   2023-02-28 10:25:57
 # @Last Modified by:   yinwai
-# @Last Modified time: 2023-03-07 18:42:58
+# @Last Modified time: 2023-03-08 14:13:50
 
 from CCRender.Topo import Topo
 from CCRender.Algo import Algorithm
@@ -34,7 +34,7 @@ labeljust=l
         if not os.path.exists(f'log/{pathname}'):
             os.makedirs(f'log/{pathname}')
         os.system(f"echo '{template}' > log/{pathname}/{filename}.dot")
-        os.system(f"echo '{template}' | neato -Tpng -o fig/{pathname}/{filename}.png &")
+        os.system(f"echo '{template}' | neato -Tpdf -o fig/{pathname}/{filename}.pdf &")
 
     def visual(self, withStep: bool = False) -> None:
         template = self.genDot(self.genNode(), self.genEdge())
