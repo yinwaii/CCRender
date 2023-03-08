@@ -2,7 +2,7 @@
 # @Author: yinwai
 # @Date:   2023-03-06 11:22:14
 # @Last Modified by:   yinwai
-# @Last Modified time: 2023-03-08 14:11:54
+# @Last Modified time: 2023-03-08 15:15:30
 
 from .Buffer import Buffer
 from .Flow import Flows
@@ -34,4 +34,4 @@ class Node:
     def updateStep(self):
         self.step += 1
         # self.print(f'node {self.rank} in step {self.step}')
-        # self.print(f'{self.buffer.buffer.astype(int)}')
+        # self.print(f'{self.buffer}')

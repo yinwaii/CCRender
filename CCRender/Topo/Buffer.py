@@ -2,7 +2,7 @@
 # @Author: yinwai
 # @Date:   2023-03-07 11:34:45
 # @Last Modified by:   yinwai
-# @Last Modified time: 2023-03-08 11:50:34
+# @Last Modified time: 2023-03-08 15:16:44
 
 import numpy as np
 
@@ -28,4 +28,4 @@ class Buffer:
         return Buffer(res)
 
     def __repr__(self):
-        return self.buffer.shape.__repr__()
+        return self.buffer.astype(int).__repr__()
