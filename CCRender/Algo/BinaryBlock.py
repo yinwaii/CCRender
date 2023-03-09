@@ -2,13 +2,13 @@
 # @Author: yinwai
 # @Date:   2023-02-28 11:26:17
 # @Last Modified by:   yinwai
-# @Last Modified time: 2023-03-09 11:52:10
+# @Last Modified time: 2023-03-09 06:46:09
 
 from .Algorithm import Algorithm
 from CCRender.Topo import UniformLayeredTopo, Flows, Node, Buffer
 import math
 
-class Butterfly(Algorithm):
+class BinaryBlock(Algorithm):
     def __init__(self, dual: bool = False, shifted: bool = False):
         self.dual: bool = dual
         self.shifted: bool = shifted
@@ -21,10 +21,9 @@ class Butterfly(Algorithm):
             peer: int = rank + (1 << step) if dual else rank - (1 << step)
         return (peer + nranks) % nranks
 
-    def dualHalf(self, rank: int, step: int, nsteps: int, dual: bool) -> bool:
-        if dual and step + 1 == nsteps and rank % (1 << step) == 0:
-            return rank != 0
-        return ((rank & (1 << step)) != 0) ^ dual
+    def dualHalf(self, rank: int, step: int, dual: bool) -> bool:
+        half: bool = (rank & (1 << step)) != 0
+        return half ^ dual
 
     def initialize(self, topo: UniformLayeredTopo):
         topo.setBuffer(1 << (topo.nintersteps + topo.nintrasteps))
@@ -66,7 +65,7 @@ class Butterfly(Algorithm):
         # Inter Reduce to Power of 2
         reducedInterSteps = 1 << topo.nintersteps
         if node.interRank >= (1 << topo.nintersteps):
-            buffer: Buffer = node.buffer.selectSlices(recvOffset, recvOffset + (1 << topo.nintersteps))
+            buffer: Buffer = node.buffer.selectSlices(begin, end)
             shiftedRank: int = (node.interRank + node.intraRank) if self.shifted else node.interRank
             peer: int = topo.getRank(shiftedRank % reducedInterSteps, node.intraRank)
             node.send(topo.nodes[peer], buffer, flow)
@@ -87,14 +86,13 @@ class Butterfly(Algorithm):
             peer: int = topo.getRank(interPeer, node.intraRank)
             halvingSlice: int = 1 << (topo.nintersteps - step - 1)
             if node.interRank < (1 << topo.nintersteps):
-                node.print(f'{topo.nintersteps - shiftedStep}')
-                sendOffset = recvOffset + (halvingSlice if self.dualHalf(node.interRank, shiftedStep, topo.nintersteps, dual) else 0)
+                sendOffset = recvOffset + (halvingSlice if self.dualHalf(node.interRank, shiftedStep, dual) else 0)
                 buffer: Buffer = node.buffer.selectSlices(sendOffset, sendOffset + halvingSlice)
                 node.send(topo.nodes[peer], buffer, flow)
                 node.print(f'node send from {sendOffset} to {sendOffset + halvingSlice}')
             yield node.step
             if node.interRank < (1 << topo.nintersteps):
-                recvOffset = recvOffset + (halvingSlice if not self.dualHalf(node.interRank, shiftedStep, topo.nintersteps, dual) else 0)
+                recvOffset = recvOffset + (halvingSlice if not self.dualHalf(node.interRank, shiftedStep, dual) else 0)
                 node.recv(topo.nodes[peer], flow)
                 node.print(f'node recv from {recvOffset} to {recvOffset + halvingSlice}')
             yield node.step

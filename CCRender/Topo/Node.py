@@ -2,15 +2,17 @@
 # @Author: yinwai
 # @Date:   2023-03-06 11:22:14
 # @Last Modified by:   yinwai
-# @Last Modified time: 2023-03-08 15:15:30
+# @Last Modified time: 2023-03-09 06:39:57
 
 from .Buffer import Buffer
 from .Flow import Flows
 import numpy as np
 
 class Node:
-    def __init__(self, rank: int):
+    def __init__(self, rank: int, intraRank: int = -1, interRank: int = -1):
         self.rank: int = rank
+        self.intraRank: int = intraRank
+        self.interRank: int = interRank
         self.step: int = 0
         self.buffer: Buffer = Buffer()
         self.log: str = ''
